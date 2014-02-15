@@ -63,8 +63,6 @@ angular.module('myApp.controllers', [])
    .controller('AccountCtrl', ['$scope', 'loginService', 'syncData', '$location', function($scope, loginService, syncData, $location) {
       syncData(['users', $scope.auth.user.uid]).$bind($scope, 'user');
 
-      console.log($scope.auth.user.uid);
-
       $scope.logout = function() { //
          loginService.logout();
       };

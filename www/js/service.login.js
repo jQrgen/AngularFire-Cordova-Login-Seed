@@ -67,7 +67,7 @@ angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
 
    .factory('profileCreator', ['firebaseRef', '$timeout', function(firebaseRef, $timeout) { // lagrer i databasen
       return function(id, email, callback) {
-         firebaseRef('users/'+id).set({email: email, name: firstPartOfEmail(email)}, function(err) {
+         firebaseRef('users/'+id).set({email: email}, function(err) {
             //err && console.error(err);
             if( callback ) {
                $timeout(function() {
@@ -75,10 +75,6 @@ angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
                })
             }
          });
-
-         function firstPartOfEmail(email) {
-            return ucfirst(email.substr(0, email.indexOf('@'))||'');
-         }
 
          function ucfirst (str) {
             // credits: http://kevin.vanzonneveld.net
