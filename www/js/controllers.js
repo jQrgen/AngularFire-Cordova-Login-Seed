@@ -4,11 +4,24 @@
 
 angular.module('myApp.controllers', [])
 
-   .controller('LoginCtrl', ['$scope', 'loginService', '$location', function($scope, loginService, $location) {
+   .controller('LoginCtrl', ['$scope', 'loginService', '$location', 'facebookLoginService', function($scope, loginService, $location, facebookLoginService) {
       $scope.email = null;
       $scope.pass = null;
       $scope.confirm = null;
       $scope.createMode = false;
+
+      $scope.facebooklogin = function(cb){
+         $scope.err = null;
+         loginService.facebookLogin(function(err, user) {
+            $scope.err = err? err + '' : null;
+            if( !err ) {
+               cb && cb(user);
+            }
+            if(!loginService.hasProfile(user.uid)){
+               loginService.createProfile(user.uid, user.email);
+            }
+         });
+      };
 
       $scope.login = function(cb) {
          $scope.err = null;

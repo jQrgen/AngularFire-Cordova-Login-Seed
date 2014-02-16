@@ -1,8 +1,8 @@
 
-angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
+angular.module('myApp.service.facebookLogin', ['firebase', 'myApp.service.firebase'])
 
-   .factory('loginService', ['$rootScope', '$firebaseSimpleLogin', 'firebaseRef', 'profileCreator', '$timeout', 'hasProfileChecker',
-      function($rootScope, $firebaseSimpleLogin, firebaseRef, profileCreator, $timeout, hasProfileChecker) {
+   .factory('facebookLoginService', ['$rootScope', '$firebaseSimpleLogin', 'firebaseRef', 'profileCreatorFacebook', '$timeout',
+      function($rootScope, $firebaseSimpleLogin, firebaseRef, profileCreatorFacebook, $timeout) {
          var auth = null;
          return {
             init: function() {
@@ -17,9 +17,7 @@ angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
              */
             login: function(email, pass, callback) {
                assertAuth();
-               auth.$login('password', {
-                  email: email,
-                  password: pass,
+               auth.$login('facebook', {
                   rememberMe: true
                }).then(function(user) {
                   console.log(user);
@@ -30,19 +28,6 @@ angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
                         });
                      }
                   }, callback);
-            },
-
-            facebookLogin: function(callback){
-               assertAuth();
-               auth.$login('facebook', {
-                  rememberMe: true
-               }).then(function(user){
-                     if(callback){
-                        $timeout(function(){
-                           callback(null, user);
-                        })
-                     }
-               })
             },
 
             logout: function() {
@@ -70,9 +55,7 @@ angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
                 callback && callback(null, user) }, callback);
             },
 
-            createProfile: profileCreator,
-
-            hasProfile: hasProfileChecker
+            createProfile: profileCreatorFacebook
          };
 
          function assertAuth() {
@@ -80,7 +63,7 @@ angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
          }
       }])
 
-   .factory('profileCreator', ['firebaseRef', '$timeout', function(firebaseRef, $timeout) { // lagrer i databasen
+   .factory('profileCreatorFacebook', ['firebaseRef', '$timeout', function(firebaseRef, $timeout) { // lagrer i databasen
       return function(id, email, callback) {
          firebaseRef('users/'+id).set({email: email}, function(err) {
             //err && console.error(err);
@@ -97,17 +80,5 @@ angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
             var f = str.charAt(0).toUpperCase();
             return f + str.substr(1);
          }
-      }
-   }])
-
-   .factory('hasProfileChecker', ['firebaseRef', function(firebaseRef){
-      return function(id){
-         firebaseRef('users').once('value', function (dataSnapshot){
-            if(dataSnapshot.hasChild(id)){
-               return true;
-            }else{
-               return false;
-            }
-         })
       }
    }]);
