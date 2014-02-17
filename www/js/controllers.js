@@ -4,7 +4,7 @@
 
 angular.module('myApp.controllers', [])
 
-   .controller('LoginCtrl', ['$scope', 'loginService', '$location', 'facebookLoginService', function($scope, loginService, $location, facebookLoginService) {
+   .controller('LoginCtrl', ['$scope', 'loginService', '$location', function($scope, loginService, $location) {
       $scope.email = null;
       $scope.pass = null;
       $scope.confirm = null;
