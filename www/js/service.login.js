@@ -35,7 +35,8 @@ angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
             facebookLogin: function(callback){
                assertAuth();
                auth.$login('facebook', {
-                  rememberMe: true
+                  rememberMe: true,
+                  scope: 'email'
                }).then(function(user){
                      if(callback){
                         $timeout(function(){
@@ -81,8 +82,9 @@ angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
       }])
 
    .factory('profileCreator', ['firebaseRef', '$timeout', function(firebaseRef, $timeout) { // lagrer i databasen
-      return function(id, email, callback) {
-         firebaseRef('users/'+id).set({email: email}, function(err) {
+      return function(id, email, name, callback) {
+         console.log(email);
+         firebaseRef('users/'+id).set({email: email, first_name: name}, function(err) {
             //err && console.error(err);
             if( callback ) {
                $timeout(function() {

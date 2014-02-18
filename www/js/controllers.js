@@ -18,7 +18,8 @@ angular.module('myApp.controllers', [])
                cb && cb(user);
             }
             if(!loginService.hasProfile(user.uid)){
-               loginService.createProfile(user.uid, user.email);
+               console.log(user);
+               loginService.createProfile(user.uid, user.email, user.first_name);
             }
          });
       };

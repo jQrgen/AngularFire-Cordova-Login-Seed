@@ -1,9 +1,21 @@
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/gen/io/cordova/hellocordova/R.java \
- : /home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/res/drawable-hdpi/icon.png \
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/res/drawable-ldpi/icon.png \
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/res/drawable-xhdpi/icon.png \
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/res/drawable-mdpi/icon.png \
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/res/values/strings.xml \
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/res/xml/config.xml \
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/res/drawable/icon.png \
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/bin/AndroidManifest.xml \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/gen/io/cordova/hellocordova/R.java \
+ : /home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/drawable-hdpi/icon.png \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/drawable-hdpi/ic_action_next_item.png \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/drawable-hdpi/ic_action_previous_item.png \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/drawable-hdpi/ic_action_remove.png \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/drawable-ldpi/icon.png \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/drawable-xhdpi/icon.png \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/drawable-xhdpi/ic_action_next_item.png \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/drawable-xhdpi/ic_action_previous_item.png \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/drawable-xhdpi/ic_action_remove.png \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/drawable-mdpi/icon.png \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/drawable-mdpi/ic_action_next_item.png \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/drawable-mdpi/ic_action_previous_item.png \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/drawable-mdpi/ic_action_remove.png \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/values/strings.xml \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/drawable-xxhdpi/ic_action_next_item.png \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/drawable-xxhdpi/ic_action_previous_item.png \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/drawable-xxhdpi/ic_action_remove.png \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/xml/config.xml \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/res/drawable/icon.png \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/AndroidManifest.xml \

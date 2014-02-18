@@ -1,9 +1,22 @@
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/bin/classes.dex : \
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/bin/classes/io/cordova/hellocordova/HelloCordova.class \
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/bin/classes/io/cordova/hellocordova/R.class \
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/bin/classes/io/cordova/hellocordova/R$attr.class \
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/bin/classes/io/cordova/hellocordova/R$drawable.class \
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/bin/classes/io/cordova/hellocordova/BuildConfig.class \
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/bin/classes/io/cordova/hellocordova/R$xml.class \
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/bin/classes/io/cordova/hellocordova/R$string.class \
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/bin/dexedLibs/classes-c9c631eb959a8490f8443f37cebe68f4.jar \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes.dex : \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/io/cordova/hellocordova/HelloCordova.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/io/cordova/hellocordova/R.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/io/cordova/hellocordova/R$attr.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/io/cordova/hellocordova/R$drawable.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/io/cordova/hellocordova/BuildConfig.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/io/cordova/hellocordova/R$xml.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/io/cordova/hellocordova/R$string.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$3.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$4.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$3.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$1.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppChromeClient.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$2.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$1.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$4.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$InAppBrowserClient.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$2.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$5.class \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/dexedLibs/classes-30d1e7bfd3216b91483e8b0ac09c4c21.jar \

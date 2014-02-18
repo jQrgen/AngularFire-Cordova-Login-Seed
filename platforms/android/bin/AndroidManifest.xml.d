@@ -1,2 +1,2 @@
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/bin/AndroidManifest.xml : \
-/home/hei/loker/AngularFireCordovaLoginSeed/platforms/android/AndroidManifest.xml \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/bin/AndroidManifest.xml : \
+/home/hei/loker/AngularFire-Cordova-Login-Seed/platforms/android/AndroidManifest.xml \

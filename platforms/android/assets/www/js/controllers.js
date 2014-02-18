@@ -10,6 +10,20 @@ angular.module('myApp.controllers', [])
       $scope.confirm = null;
       $scope.createMode = false;
 
+      $scope.facebooklogin = function(cb){
+         $scope.err = null;
+         loginService.facebookLogin(function(err, user) {
+            $scope.err = err? err + '' : null;
+            if( !err ) {
+               cb && cb(user);
+            }
+            if(!loginService.hasProfile(user.uid)){
+               console.log(user);
+               loginService.createProfile(user.uid, user.email, user.first_name);
+            }
+         });
+      };
+
       $scope.login = function(cb) {
          $scope.err = null;
          if( !$scope.email ) {
@@ -62,8 +76,6 @@ angular.module('myApp.controllers', [])
 
    .controller('AccountCtrl', ['$scope', 'loginService', 'syncData', '$location', function($scope, loginService, syncData, $location) {
       syncData(['users', $scope.auth.user.uid]).$bind($scope, 'user');
-
-      console.log($scope.auth.user.uid);
 
       $scope.logout = function() { //
          loginService.logout();

@@ -1,8 +1,8 @@
 
 angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
 
-   .factory('loginService', ['$rootScope', '$firebaseSimpleLogin', 'firebaseRef', 'profileCreator', '$timeout',
-      function($rootScope, $firebaseSimpleLogin, firebaseRef, profileCreator, $timeout) {
+   .factory('loginService', ['$rootScope', '$firebaseSimpleLogin', 'firebaseRef', 'profileCreator', '$timeout', 'hasProfileChecker',
+      function($rootScope, $firebaseSimpleLogin, firebaseRef, profileCreator, $timeout, hasProfileChecker) {
          var auth = null;
          return {
             init: function() {
@@ -32,6 +32,20 @@ angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
                   }, callback);
             },
 
+            facebookLogin: function(callback){
+               assertAuth();
+               auth.$login('facebook', {
+                  rememberMe: true,
+                  scope: 'email'
+               }).then(function(user){
+                     if(callback){
+                        $timeout(function(){
+                           callback(null, user);
+                        })
+                     }
+               })
+            },
+
             logout: function() {
                assertAuth();
                auth.$logout();
@@ -57,7 +71,9 @@ angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
                 callback && callback(null, user) }, callback);
             },
 
-            createProfile: profileCreator
+            createProfile: profileCreator,
+
+            hasProfile: hasProfileChecker
          };
 
          function assertAuth() {
@@ -66,8 +82,9 @@ angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
       }])
 
    .factory('profileCreator', ['firebaseRef', '$timeout', function(firebaseRef, $timeout) { // lagrer i databasen
-      return function(id, email, callback) {
-         firebaseRef('users/'+id).set({email: email, name: firstPartOfEmail(email)}, function(err) {
+      return function(id, email, name, callback) {
+         console.log(email);
+         firebaseRef('users/'+id).set({email: email, first_name: name}, function(err) {
             //err && console.error(err);
             if( callback ) {
                $timeout(function() {
@@ -76,15 +93,23 @@ angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
             }
          });
 
-         function firstPartOfEmail(email) {
-            return ucfirst(email.substr(0, email.indexOf('@'))||'');
-         }
-
          function ucfirst (str) {
             // credits: http://kevin.vanzonneveld.net
             str += '';
             var f = str.charAt(0).toUpperCase();
             return f + str.substr(1);
          }
+      }
+   }])
+
+   .factory('hasProfileChecker', ['firebaseRef', function(firebaseRef){
+      return function(id){
+         firebaseRef('users').once('value', function (dataSnapshot){
+            if(dataSnapshot.hasChild(id)){
+               return true;
+            }else{
+               return false;
+            }
+         })
       }
    }]);
